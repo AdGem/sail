@@ -30,11 +30,15 @@ By default, xdebug is turned off to reduce overhead. To enable xdebug you simply
 
     SAIL_XDEBUG_MODE=develop,debug
     
-You can find the available modes in the official xdebug documentation: [XDEBUG_MODE Docs](https://xdebug.org/docs/step_debug#mode)
+You can find the available modes in the official xdebug documentation:
+
+[XDEBUG_MODE Docs](https://xdebug.org/docs/step_debug#mode)
 
 If you wish to change modes, you will need to restart your container.
 
-The other environment variable is used to override a number of various xdebug settings. You will need to consult the official xdebug documentation for its various uses: [XDEBUG_CONFIG Docs](https://xdebug.org/docs/all_settings#mode)
+The other environment variable is used to override a number of various xdebug settings. You will need to consult the official xdebug documentation for its various uses:
+
+[XDEBUG_CONFIG Docs](https://xdebug.org/docs/all_settings#mode)
 
 #### Mac / Windows
 
