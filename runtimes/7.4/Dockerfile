@@ -27,7 +27,7 @@ RUN apt-get update \
        php7.4-xml php7.4-zip php7.4-bcmath php7.4-soap \
        php7.4-intl php7.4-readline php7.4-pcov \
        php7.4-msgpack php7.4-igbinary php7.4-ldap \
-       php7.4-redis \
+       php7.4-redis php7.4-xdebug \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs \
@@ -48,6 +48,7 @@ RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
 
 COPY start-container /usr/local/bin/start-container
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY xdebug.ini /etc/php/7.4/cli/conf.d/20-xdebug.ini
 COPY php.ini /etc/php/7.4/cli/conf.d/99-sail.ini
 RUN chmod +x /usr/local/bin/start-container
 

@@ -13,6 +13,8 @@ services:
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
+            XDEBUG_MODE: '${SAIL_XDEBUG_MODE}'
+            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG}'
         volumes:
             - '.:/var/www/html'
         networks:
