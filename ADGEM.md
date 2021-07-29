@@ -85,4 +85,4 @@ All tests:
 
 If you want to debug a web session, follow the instructions provided by xdebug for initiating an xdebug session from the web browser.
 
-https://xdebug.org/docs/step_debug#browser-extensions
+[Browser Extensions](https://xdebug.org/docs/step_debug#browser-extensions)
