@@ -1,4 +1,6 @@
-# [AdGem/sail](https://github.com/AdGem/sail) fork of [laravel/sail](https://github.com/laravel/sail)
+# [AdGem/sail](https://github.com/AdGem/sail) 
+
+A fork of [laravel/sail](https://github.com/laravel/sail)
 
 ## Purpose 
 
