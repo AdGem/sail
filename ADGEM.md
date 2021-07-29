@@ -10,8 +10,6 @@ We've made the following customizations to the official Sail project:
 
 - Installed and configured xdebug.
 - Added a `sail debug` command to enable xdebug when running artisan commands and phpunit tests.
-- Added a `init` command for initializing the project on a new machine.
-- Added a `build` command for running composer install, artisan migrate, npm install, and npm run dev in one command. 
 
 ## Why Fork?
 
