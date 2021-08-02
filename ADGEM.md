@@ -60,7 +60,9 @@ You can retrieve the appropriate ip address using:
 
 #### Firewall Issues
 
-If you are running a firewall such as `ufw` then your containers may have issues connecting to your host machine. To get around this, you need to open up access to the xdebug port on your host machine.
+If you are running a firewall such as `ufw` then your containers may have issues connecting to your host machine. To get around this, you need to open up access to the xdebug port on your host machine: 
+
+    sudo ufw allow proto tcp to any port 9003
 
 ### Xdebug with Artisan
 
