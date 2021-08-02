@@ -34,28 +34,33 @@ You can find the available modes in the official xdebug documentation:
 
 [XDEBUG_MODE Docs](https://xdebug.org/docs/step_debug#mode)
 
-If you wish to change modes, you will need to restart your container.
-
 The other environment variable is used to override a number of various xdebug settings. You will need to consult the official xdebug documentation for its various uses:
 
 [XDEBUG_CONFIG Docs](https://xdebug.org/docs/all_settings#mode)
 
+For config changes to take effect, you need to recreate the containers.
+
 #### Mac / Windows
 
-For Windows and Mac host machines, all you should need to do to get started is to turn on xdebug:
+For Windows and Mac host machines, you can use the built-in hostname "host.docker.internal" for configuring xdebug:
 
     SAIL_XDEBUG_MODE=develop,debug
+    SAIL_XDEBUG_CONFIG="client_host=host.docker.internal"
 
 #### Linux
 
-For Linux host machines, you will need to set the appropriate client_host because the value is not available by default within the container:
+For Linux host machines, you will need to set the appropriate client_host because the "host.docker.internal" value is not available:
 
     SAIL_XDEBUG_MODE=develop,debug
-    SAIL_XDEBUG_CONFIG="client_host=192.168.1.1
+    SAIL_XDEBUG_CONFIG="client_host=192.168.1.1"
 
 You can retrieve the appropriate ip address using:
 
     docker inspect -f {{range.NetworkSettings.Networks}}{{.Gateway}}{{end}} container-name
+
+#### Firewall Issues
+
+If you are running a firewall such as `ufw` then your containers may have issues connecting to your host machine. To get around this, you need to open up access to the xdebug port on your host machine.
 
 ### Xdebug with Artisan
 
